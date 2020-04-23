@@ -27,6 +27,10 @@ namespace DclickUnityAds.Android
     {
       this.adManager.Call("showBannerAd");
     }
+    public void Hide()
+    {
+      this.adManager.Call("hideBannerAd");
+    }
     public void Destroy()
     {
       this.adManager.Call("destroyBannerAd");

@@ -19,6 +19,9 @@ namespace DclickUnityAds.iOS
     public void Show()
     {
     }
+    public void Hide()
+    {
+    }
     public void Destroy()
     {
     }

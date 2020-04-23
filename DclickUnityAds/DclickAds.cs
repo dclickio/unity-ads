@@ -9,7 +9,7 @@ public class DclickAds : MonoBehaviour
   private BannerAd bannerAd;
   private InterstitialAd interstitialAd;
   private RewardedAd rewardedAd;
-
+  private bool isBannerAdVisible = false;
   void Start()
   {
     // For Test
@@ -42,6 +42,8 @@ public class DclickAds : MonoBehaviour
     this.bannerAd.OnAdFailed += () => { };
     this.bannerAd.Load();
     this.bannerAd.Show();
+
+    this.isBannerAdVisible = true;
   }
 
   void LoadInterstitialAd()
@@ -61,6 +63,17 @@ public class DclickAds : MonoBehaviour
     this.rewardedAd.OnAdClosed += () => { };
     this.rewardedAd.OnRewardEarned += () => { };
     this.rewardedAd.Load();
+  }
+  
+  public void OnToggleBannerAd()
+  {
+    if (this.isBannerAdVisible) {
+      this.bannerAd.Hide();
+      this.isBannerAdVisible = false;
+    } else {
+      this.bannerAd.Show();
+      this.isBannerAdVisible = true;
+    }
   }
 
   public void OnShowInterstitialAd()

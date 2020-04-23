@@ -34,6 +34,11 @@ namespace DclickUnityAds.Api
       client.Show();
     }
 
+    public void Hide()
+    {
+      client.Hide();
+    }
+
     public void Destroy()
     {
       client.Destroy();

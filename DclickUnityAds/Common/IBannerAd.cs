@@ -9,6 +9,7 @@ namespace DclickUnityAds.Common
     event Action OnAdFailed;
     void Load();
     void Show();
+    void Hide();
     void Destroy();
   }
 }
