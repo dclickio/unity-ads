@@ -25,6 +25,7 @@ public class DclickAds : MonoBehaviour
     adConfig.SetUnitId(AdNetwork.Dclick, AdType.Interstitial, "test/test");
     adConfig.SetUnitId(AdNetwork.Google, AdType.Interstitial, "ca-app-pub-3940256099942544/1033173712");
 
+    adConfig.SetUnitId(AdNetwork.Dclick, AdType.Rewarded, "test/test");
     adConfig.SetUnitId(AdNetwork.Google, AdType.Rewarded, "ca-app-pub-3940256099942544/2247696110");
     
     AdManager.Initialize(adConfig);
